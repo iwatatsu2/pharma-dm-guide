@@ -54,7 +54,7 @@ export const preopFlow: FlowChart = {
       type: "question",
       text: "GLP-1受容体作動薬の投与頻度は？",
       options: [
-        { label: "毎日投与（ビクトーザ、リキスミア等）", nextId: "r_glp1_daily" },
+        { label: "毎日投与（ビクトーザ等）", nextId: "r_glp1_daily" },
         { label: "週1回投与（トルリシティ、オゼンピック等）", nextId: "r_glp1_weekly" },
         { label: "経口GLP-1（リベルサス）", nextId: "r_glp1_oral" },
         { label: "GIP/GLP-1（マンジャロ）", nextId: "r_glp1_weekly" },
@@ -68,7 +68,6 @@ export const preopFlow: FlowChart = {
       recommendation: "手術当日の朝は投与しない。術後、経口摂取が再開されてから再開する。",
       details: [
         "ビクトーザ（リラグルチド）0.3/0.6/0.9mg",
-        "リキスミア（リキシセナチド）10/20μg",
       ],
       rationale: "GLP-1受容体作動薬は胃排出を遅延させるため、全身麻酔時の誤嚥リスクが上昇する。ASA 2023ガイドラインで周術期の休薬が推奨。",
       caution: "術前の絶飲食時間を通常より延長する必要がある場合あり。麻酔科と連携すること。",
