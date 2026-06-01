@@ -132,6 +132,14 @@ export default function AboutPage() {
               >
                 <span className="text-teal">📷</span> @dr.iwatatsu
               </a>
+              <a
+                href="https://note.com/dr_iwatatsu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-text-secondary hover:text-cyan transition-colors"
+              >
+                <span className="text-teal">📝</span> note.com/dr_iwatatsu
+              </a>
             </div>
           </div>
         </div>
