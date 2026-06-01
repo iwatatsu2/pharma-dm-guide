@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg-dark: #0a1a1a;
+  --bg-dark-mid: #132e2e;
+  --teal: #14b8a6;
+  --teal-dark: #0d9488;
+  --cyan: #2dd4bf;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Hiragino Sans", "Noto Sans JP", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-mid) 50%, var(--bg-dark) 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+@theme inline {
+  --color-teal: #14b8a6;
+  --color-teal-dark: #0d9488;
+  --color-cyan: #2dd4bf;
+  --color-cyan-light: #5eead4;
+  --color-dm-red: #f87171;
+  --color-dm-amber: #fbbf24;
+  --color-bg-dark: #0a1a1a;
+  --color-bg-card: rgba(20, 184, 166, 0.08);
+  --color-bg-card-hover: rgba(20, 184, 166, 0.15);
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #94a3b8;
 }
