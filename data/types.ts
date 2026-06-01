@@ -8,6 +8,10 @@ export type FlowNode = {
   caution?: string;
   severity?: "safe" | "caution" | "danger";
   details?: string[];
+  column?: {
+    title: string;
+    body: string[];
+  };
 };
 
 export type FlowChart = {

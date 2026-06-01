@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import type { FlowChart, FlowNode } from "@/data/types";
 
 function severityColor(severity?: string) {
@@ -39,6 +39,54 @@ function severityBadge(severity?: string) {
     default:
       return null;
   }
+}
+
+function ColumnBox({ title, body }: { title: string; body: string[] }) {
+  const [open, setOpen] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setHeight(contentRef.current.scrollHeight);
+    }
+  }, [open]);
+
+  return (
+    <div className="mt-4 border border-teal/30 rounded-lg overflow-hidden">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="w-full flex items-center gap-2 px-4 py-3 bg-teal/5 hover:bg-teal/10 transition-colors text-left"
+      >
+        <span className="text-teal text-base">📝</span>
+        <span className="text-sm font-bold text-teal flex-1">{title}</span>
+        <span
+          className={`text-teal text-xs transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        >
+          ▼
+        </span>
+      </button>
+      <div
+        className="transition-all duration-300 overflow-hidden"
+        style={{ maxHeight: open ? height : 0 }}
+      >
+        <div ref={contentRef} className="px-4 py-3 space-y-2">
+          {body.map((paragraph, i) => (
+            <p
+              key={i}
+              className={`text-sm leading-relaxed ${
+                paragraph.startsWith("■")
+                  ? "font-bold text-text-primary mt-3"
+                  : "text-text-secondary"
+              }`}
+            >
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function FlowEngine({ flow }: { flow: FlowChart }) {
@@ -149,6 +197,13 @@ export default function FlowEngine({ flow }: { flow: FlowChart }) {
                 ⚠ {currentNode.caution}
               </p>
             </div>
+          )}
+
+          {currentNode.column && (
+            <ColumnBox
+              title={currentNode.column.title}
+              body={currentNode.column.body}
+            />
           )}
         </div>
       )}
