@@ -54,22 +54,48 @@ export default function AboutPage() {
 
           <div className="bg-bg-card border border-teal/10 rounded-xl p-4">
             <h3 className="text-sm font-bold text-cyan mb-2">開発アプリ</h3>
-            <ul className="text-sm text-text-secondary space-y-1.5">
-              <li className="flex gap-2">
-                <span className="text-teal shrink-0">•</span>
-                DM Compass — 糖尿病病棟の5つの計算
+            <ul className="text-sm text-text-secondary space-y-2">
+              <li>
+                <a href="https://iwatatsu2.github.io/dm-compass/" target="_blank" rel="noopener noreferrer" className="flex gap-2 hover:text-cyan transition-colors">
+                  <span className="text-teal shrink-0">•</span>
+                  <span><span className="font-bold text-text-primary">DM Compass</span> — 糖尿病病棟の5つの計算</span>
+                </a>
               </li>
-              <li className="flex gap-2">
-                <span className="text-teal shrink-0">•</span>
-                InsuCalc — インスリン・カーボ計算機
+              <li>
+                <a href="https://insulin-calculator-gamma.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex gap-2 hover:text-cyan transition-colors">
+                  <span className="text-teal shrink-0">•</span>
+                  <span><span className="font-bold text-text-primary">InsuCalc</span> — インスリン・カーボ計算機</span>
+                </a>
               </li>
-              <li className="flex gap-2">
-                <span className="text-teal shrink-0">•</span>
-                PharmaDM Guide — 本アプリ
+              <li>
+                <a href="https://iwatatsu2.github.io/electrolyte-compass/" target="_blank" rel="noopener noreferrer" className="flex gap-2 hover:text-cyan transition-colors">
+                  <span className="text-teal shrink-0">•</span>
+                  <span><span className="font-bold text-text-primary">Electrolyte Compass</span> — 電解質異常の鑑別・対応</span>
+                </a>
               </li>
-              <li className="flex gap-2">
-                <span className="text-teal shrink-0">•</span>
-                その他 10以上の医療Webアプリを開発
+              <li>
+                <a href="https://endoguide.vercel.app/endocrine" target="_blank" rel="noopener noreferrer" className="flex gap-2 hover:text-cyan transition-colors">
+                  <span className="text-teal shrink-0">•</span>
+                  <span><span className="font-bold text-text-primary">Endo Compass</span> — 内分泌負荷試験リファレンス</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://iwatatsu2.github.io/dr-iwatatsu-dm-renal-tool/" target="_blank" rel="noopener noreferrer" className="flex gap-2 hover:text-cyan transition-colors">
+                  <span className="text-teal shrink-0">•</span>
+                  <span><span className="font-bold text-text-primary">DM腎機能Doseツール</span> — 腎機能別の用量サポート</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://glucose-diary.vercel.app/record" target="_blank" rel="noopener noreferrer" className="flex gap-2 hover:text-cyan transition-colors">
+                  <span className="text-teal shrink-0">•</span>
+                  <span><span className="font-bold text-text-primary">Glucose Diary</span> — 血糖・体重・血圧記録アプリ</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://medapp-market.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex gap-2 hover:text-cyan transition-colors">
+                  <span className="text-teal shrink-0">•</span>
+                  <span><span className="font-bold text-text-primary">MedApp Market</span> — 医療Webアプリマーケット</span>
+                </a>
               </li>
             </ul>
           </div>
