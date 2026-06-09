@@ -42,7 +42,7 @@ export default function Home() {
               <h3 className={`text-xs font-bold mb-2 ml-1 ${group.color}`}>
                 {group.label}
               </h3>
-              <div className="flex flex-col gap-2.5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
                 {groupFlows.map((flow) => (
                   <CategoryCard
                     key={flow.id}

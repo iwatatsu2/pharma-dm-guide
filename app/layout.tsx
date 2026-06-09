@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        <div className="mx-auto max-w-lg min-h-screen">{children}</div>
+        <div className="mx-auto max-w-lg md:max-w-3xl min-h-screen">{children}</div>
         <Analytics />
       </body>
     </html>
